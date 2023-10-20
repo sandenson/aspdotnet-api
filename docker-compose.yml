@@ -1,0 +1,12 @@
+version: '3.0'
+name: dotnet-api
+services:
+  dotnet-api-mssql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: dotnet-api-mssql-server
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: ValidPassword#1234
+      MSSQL_PID: Express
+    ports:
+      - 1433:1433
